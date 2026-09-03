@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-neo-canvas: #f4f0ea;
+  --color-neo-yellow: #ffe600;
+  --color-neo-pink: #ff70a6;
+  --color-neo-purple: #a259ff;
+  --color-neo-mint: #70e000;
+  --color-neo-red: #ff4747;
+  --color-neo-blue: #3a86ef;
+  --color-neo-gray: #e2e8f0;
+
+  --shadow-neo-sm: 2px 2px 0px #000000;
+  --shadow-neo-md: 4px 4px 0px #000000;
+  --shadow-neo-lg: 6px 6px 0px #000000;
+  --shadow-neo-xl: 8px 8px 0px #000000;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  input,
+  select,
+  textarea {
+    outline: none;
+  }
+}
+
+@layer components {
+  .neo-border {
+    border: 3px solid #000000;
+  }
+
+  .neo-btn {
+    transition: all 0.1s ease-out;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .neo-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000000;
+  }
+
+  .neo-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+  }
+
+  .neo-btn:disabled {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+    color: #94a3b8;
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+  }
+
+  .neo-input {
+    @apply w-full rounded-xl border-3 border-black bg-white p-3 font-semibold text-black placeholder:text-slate-400 focus:bg-white;
+  }
+
+  .neo-input:focus {
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .neo-input-error {
+    @apply border-neo-red bg-red-50;
+    box-shadow: 4px 4px 0px #ff4747;
+  }
+
+  .neo-card {
+    @apply rounded-2xl border-3 border-black bg-white;
+    box-shadow: 5px 5px 0px #000000;
+  }
+}
+
+/* Leaflet marker cluster overrides */
+.marker-cluster-small {
+  background-color: rgba(255, 230, 0, 0.8);
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.marker-cluster-small div {
+  background-color: rgba(255, 230, 0, 0.9);
+  color: #000;
+  font-weight: 900;
+  font-family: "Space Grotesk", sans-serif;
+}
