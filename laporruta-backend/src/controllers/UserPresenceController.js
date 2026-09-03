@@ -1,4 +1,4 @@
-const userPresenceService = require("../services/userPresenceService");
+const userPresenceService = require("../services/UserPresenceService");
 const ResponseHelper = require("../utils/responseHelper");
 const MESSAGES = require("../constants/errorMessages");
 

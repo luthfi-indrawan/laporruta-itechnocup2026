@@ -1,5 +1,5 @@
 const express = require("express");
-const AdminWilayahController = require("../controllers/adminWilayahController");
+const AdminWilayahController = require("../controllers/AdminWilayahController");
 const authMiddleware = require("../middlewares/authMiddleware");
 const roleMiddleware = require("../middlewares/roleMiddleware");
 const {

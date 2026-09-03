@@ -1,7 +1,7 @@
 const { getClient } = require("../config/database");
 const reportsModel = require("../models/reportsModel");
 const upvotesModel = require("../models/upvotesModel");
-const activityLogsModel = require("../models/activityLogsModel");
+const activityLogsModel = require("../models/ActivityLogsModel");
 const MESSAGES = require("../constants/errorMessages");
 const HTTP_STATUS = require("../constants/httpStatus");
 const socketHelper = require("../utils/socketHelper");

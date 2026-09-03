@@ -1,6 +1,6 @@
 const reportsModel = require("../models/reportsModel");
 const MESSAGES = require("../constants/errorMessages");
-const commentsModel = require("../models/commentsModel");
+const commentsModel = require("../models/CommentsModel");
 const HTTP_STATUS = require("../constants/httpStatus");
 
 class ReportsPublicService {

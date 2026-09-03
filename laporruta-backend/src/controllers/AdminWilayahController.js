@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const adminWilayahService = require("../services/adminWilayahService");
+const adminWilayahService = require("../services/AdminWilayahService");
 const ResponseHelper = require("../utils/responseHelper");
 const MESSAGES = require("../constants/errorMessages");
 

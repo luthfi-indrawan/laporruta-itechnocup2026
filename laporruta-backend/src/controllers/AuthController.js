@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const authService = require("../services/authService");
+const authService = require("../services/AuthService");
 const jwtHelper = require("../utils/jwtHelper");
 const ResponseHelper = require("../utils/responseHelper");
 const MESSAGES = require("../constants/errorMessages");

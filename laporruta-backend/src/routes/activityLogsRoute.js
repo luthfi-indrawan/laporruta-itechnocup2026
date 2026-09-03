@@ -1,5 +1,5 @@
 const express = require("express");
-const ActivityLogsController = require("../controllers/activityLogsController");
+const ActivityLogsController = require("../controllers/ActivityLogsController");
 
 const router = express.Router({ mergeParams: true });
 

@@ -1,12 +1,12 @@
 const reportsModel = require("../models/reportsModel");
 const reportImagesModel = require("../models/reportImagesModel");
 const reportAdminNotesModel = require("../models/reportAdminNotesModel");
-const activityLogsModel = require("../models/activityLogsModel");
+const activityLogsModel = require("../models/ActivityLogsModel");
 const usersModel = require("../models/usersModel");
 const MESSAGES = require("../constants/errorMessages");
 const HTTP_STATUS = require("../constants/httpStatus");
 const socketHelper = require("../utils/socketHelper");
-const commentsModel = require("../models/commentsModel");
+const commentsModel = require("../models/CommentsModel");
 class AdminPusatService {
   async getAllReports(filters) {
     const page = Math.max(Number.parseInt(filters.page, 10) || 1, 1);

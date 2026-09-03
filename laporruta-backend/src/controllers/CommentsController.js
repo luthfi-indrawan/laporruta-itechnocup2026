@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const commentsService = require("../services/commentsService");
+const commentsService = require("../services/CommentsService");
 const ResponseHelper = require("../utils/responseHelper");
 const MESSAGES = require("../constants/errorMessages");
 

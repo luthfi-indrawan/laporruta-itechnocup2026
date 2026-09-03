@@ -1,4 +1,4 @@
-const activityLogsModel = require("../models/activityLogsModel");
+const activityLogsModel = require("../models/ActivityLogsModel");
 const reportsModel = require("../models/reportsModel");
 const MESSAGES = require("../constants/errorMessages");
 const HTTP_STATUS = require("../constants/httpStatus");

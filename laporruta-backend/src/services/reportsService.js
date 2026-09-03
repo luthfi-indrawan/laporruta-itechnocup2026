@@ -1,8 +1,8 @@
 const { getClient } = require("../config/database");
 const reportsModel = require("../models/reportsModel");
 const reportImagesModel = require("../models/reportImagesModel");
-const activityLogsModel = require("../models/activityLogsModel");
-const commentsModel = require("../models/commentsModel");
+const activityLogsModel = require("../models/ActivityLogsModel");
+const commentsModel = require("../models/CommentsModel");
 const disputesModel = require("../models/disputesModel");
 const usersModel = require("../models/usersModel");
 const { uploadFile, deleteFiles, getPublicUrl } = require("../config/supabase");

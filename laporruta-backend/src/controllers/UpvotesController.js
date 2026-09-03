@@ -1,4 +1,4 @@
-const upvotesService = require("../services/upvotesService");
+const upvotesService = require("../services/UpvotesService");
 const ResponseHelper = require("../utils/responseHelper");
 const MESSAGES = require("../constants/errorMessages");
 

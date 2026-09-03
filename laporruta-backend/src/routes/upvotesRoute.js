@@ -1,5 +1,5 @@
 const express = require("express");
-const UpvotesController = require("../controllers/upvotesController");
+const UpvotesController = require("../controllers/UpvotesController");
 const authMiddleware = require("../middlewares/authMiddleware");
 const roleMiddleware = require("../middlewares/roleMiddleware");
 

@@ -1,4 +1,4 @@
-const activityLogsService = require("../services/activityLogsService");
+const activityLogsService = require("../services/ActivityLogsService");
 const ResponseHelper = require("../utils/responseHelper");
 const MESSAGES = require("../constants/errorMessages");
 
