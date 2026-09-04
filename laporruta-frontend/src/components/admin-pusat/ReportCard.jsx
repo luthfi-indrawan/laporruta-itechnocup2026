@@ -138,12 +138,6 @@ export function ReportCard({
               </span>
             )}
 
-            <span className="bg-neo-canvas flex items-center gap-1 rounded-full border-2 border-black px-2 py-0.5 text-xs font-bold">
-              <MapPin className="h-3 w-3" />
-
-              {resolvedWilayah?.name || 'Zona Tidak Dikenal'}
-            </span>
-
             <span className="flex items-center gap-1 rounded-full border-2 border-black bg-white px-2 py-0.5 text-xs font-bold">
               <Flame className="text-neo-pink h-3 w-3" />
 
