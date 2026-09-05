@@ -88,12 +88,19 @@ export function AuthProvider({ children }) {
   }, []);
 
   const updateLastSeen = useCallback(async () => {
-    if (!user) return;
     try {
       await api.patch('/users/last-seen');
-      setUser((prev) => (prev ? { ...prev, last_seen_at: new Date().toISOString() } : prev));
+
+      setUser((prev) =>
+        prev
+          ? {
+              ...prev,
+              last_seen_at: new Date().toISOString(),
+            }
+          : prev
+      );
     } catch {}
-  }, [user]);
+  }, []);
 
   return (
     <AuthContext.Provider
