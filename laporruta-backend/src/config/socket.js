@@ -22,7 +22,7 @@ class SocketManager {
     this.io = new Server(server, {
       path: process.env.WS_PATH || "/ws",
       cors: {
-        origin: process.env.CORS_ORIGIN || "*",
+        origin: process.env.CORS_ORIGIN || "https://laporruta.netlify.app",
         credentials: true,
       },
       // Fallback: long-polling → websocket
