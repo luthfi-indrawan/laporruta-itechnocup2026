@@ -29,6 +29,7 @@ LaporRuta dirancang untuk meningkatkan transparansi, partisipasi masyarakat, dan
 - [SDG Alignment](#sdg-alignment)
 - [Future Development](#future-development)
 - [Project Status](#project-status)
+- [Demo Account](#demo-account)
 
 ---
 
@@ -846,6 +847,28 @@ Sistem juga telah mencakup:
 - Real-time updates.
 - Image evidence.
 - Report tracking.
+
+---
+
+# Demo Account
+
+## User/Citizen
+
+### Email: **siti.aminah@gmail.com**
+
+### Password: **password123**
+
+## Admin Wilayah
+
+### Email: **officer.bekasiutara@gmail.com**
+
+### Password: **password123**
+
+## User/Citizen
+
+### Email: **admin@gmail.com**
+
+### Password: **password123**
 
 ---
 
