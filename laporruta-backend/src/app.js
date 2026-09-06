@@ -42,18 +42,18 @@ app.use(
 );
 
 // Rate Limiting
-const limiter = rateLimit({
-  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS, 10) || 15 * 60 * 1000,
-  max: parseInt(process.env.RATE_LIMIT_MAX, 10) || 100,
-  standardHeaders: true,
-  legacyHeaders: false,
-  message: {
-    code: 429,
-    message: "Terlalu banyak permintaan, silakan coba lagi nanti.",
-    error: null,
-  },
-});
-app.use("/api/", limiter);
+// const limiter = rateLimit({
+//   windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS, 10) || 15 * 60 * 1000,
+//   max: parseInt(process.env.RATE_LIMIT_MAX, 10) || 100,
+//   standardHeaders: true,
+//   legacyHeaders: false,
+//   message: {
+//     code: 429,
+//     message: "Terlalu banyak permintaan, silakan coba lagi nanti.",
+//     error: null,
+//   },
+// });
+// app.use("/api/", limiter);
 
 // Body Parsing
 app.use(express.json({ limit: "10mb" }));
