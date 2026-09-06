@@ -1,14 +1,15 @@
-import { io } from "socket.io-client";
+import { io } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:8080";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:8080';
 
 let socket = null;
 
 export function getSocket() {
   if (!socket) {
     socket = io(SOCKET_URL, {
+      path: '/ws',
       autoConnect: false,
-      transports: ["websocket", "polling"],
+      transports: ['websocket', 'polling'],
       reconnection: true,
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
@@ -36,13 +37,13 @@ export function disconnectSocket() {
 export function joinRoom(room) {
   const s = getSocket();
   if (s?.connected) {
-    s.emit("join:room", { room });
+    s.emit('join:room', { room });
   }
 }
 
 export function leaveRoom(room) {
   const s = getSocket();
   if (s?.connected) {
-    s.emit("leave:room", { room });
+    s.emit('leave:room', { room });
   }
 }
