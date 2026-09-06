@@ -11,16 +11,33 @@ const errorHandler = require("./middlewares/errorHandler");
 const ResponseHelper = require("./utils/responseHelper");
 const { query } = require("./config/database");
 const HTTP_STATUS = require("./constants/httpStatus");
-
 const app = express();
 
-// Security Middleware
-app.use(helmet());
-app.use(compression());
+app.use((req, res, next) => {
+  console.log("[REQUEST]", req.method, req.originalUrl);
+  console.log("[ORIGIN]", req.headers.origin);
+  next();
+});
+
+// Deklarasikan daftar origin yang diizinkan
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5173", // Port default Vite (sesuaikan jika perlu)
+  process.env.FRONTEND_URL, // Tambahkan dari .env jika ada
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "https://laporruta.netlify.app",
-    credentials: true,
+    origin: function (origin, callback) {
+      // Izinkan request tanpa origin (seperti Postman, Curl, Mobile)
+      // ATAU jika origin terdaftar di allowedOrigins
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Diblokir oleh aturan CORS"));
+      }
+    },
+    credentials: true, // Wajib bernilai true untuk izinkan cookie
   }),
 );
 

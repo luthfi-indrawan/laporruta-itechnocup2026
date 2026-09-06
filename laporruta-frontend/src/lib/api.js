@@ -7,8 +7,10 @@ export const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
+    'ngrok-skip-browser-warning': 'true', // Melewati halaman peringatan Ngrok
   },
   timeout: 30000,
+  withCredentials: true,
 });
 
 let accessToken = null;
